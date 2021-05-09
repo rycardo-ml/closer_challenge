@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.postalcodes.PostalCodeFragment">
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:hint="Search"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        tools:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_postalCodes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/et_search"
+        app:layout_constraintBottom_toBottomOf="@id/bt_fetchPostalCodes"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="100"
+        tools:listitem="@layout/postal_code_row" />
+
+    <Button
+        android:id="@+id/bt_fetchPostalCodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FETCH DATA"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.closer.test.presentation.common.LoadingView
+        android:id="@id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/et_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="gone"/>
+
+    <com.closer.test.presentation.common.ErrorView
+        android:id="@id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:showImage="true"
+        tools:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
