@@ -1,4 +1,4 @@
-package com.closer.test.presentation.articles
+package com.closer.test.presentation.main.articles
 
 import android.util.Log
 import androidx.lifecycle.LiveData

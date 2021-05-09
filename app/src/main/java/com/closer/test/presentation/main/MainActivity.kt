@@ -1,5 +1,6 @@
-package com.closer.test.presentation
+package com.closer.test.presentation.main
 
+import android.content.ComponentName
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,9 +8,9 @@ import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import com.closer.test.R
 import com.closer.test.databinding.MainActivityBinding
-import com.closer.test.presentation.articles.ArticlesFragment
-import com.closer.test.presentation.main.MainViewModel
-import com.closer.test.presentation.postalcodes.PostalCodeFragment
+import com.closer.test.presentation.full_article.FullArticleActivity
+import com.closer.test.presentation.main.articles.ArticlesFragment
+import com.closer.test.presentation.main.postalcodes.PostalCodeFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 private const val TAG = "MainActivity"
@@ -68,7 +69,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun registerObservers() {
         viewModel.ldArticle.observe(this, {
+            if (it == null) return@observe
+
             Log.d(TAG, "article selected $it" )
+            startActivity(FullArticleActivity.createIntent(it).apply {
+                this.component = ComponentName(this@MainActivity, FullArticleActivity::class.java)
+            })
         })
     }
 

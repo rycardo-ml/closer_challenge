@@ -1,4 +1,4 @@
-package com.closer.test.presentation.articles.adapter
+package com.closer.test.presentation.main.articles.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import com.closer.test.databinding.ArticleRowBinding
 import com.closer.test.util.model.Article
 
-class ArticleAdapter(val clickListener: (article: Article) -> Unit): PagingDataAdapter<Article, ArticleHolder>(REPO_COMPARATOR) {
+class ArticleAdapter(val clickListener: (article: Article) -> Unit): PagingDataAdapter<Article, ArticleHolder>(
+    REPO_COMPARATOR
+) {
 
     companion object {
         private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<Article>() {

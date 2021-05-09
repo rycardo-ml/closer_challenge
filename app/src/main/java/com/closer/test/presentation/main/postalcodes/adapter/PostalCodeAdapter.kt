@@ -1,4 +1,4 @@
-package com.closer.test.presentation.postalcodes.adapter
+package com.closer.test.presentation.main.postalcodes.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.closer.test.presentation.postalcodes
+package com.closer.test.presentation.main.postalcodes
 
 import android.util.Log
 import androidx.lifecycle.LiveData

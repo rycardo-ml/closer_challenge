@@ -1,4 +1,4 @@
-package com.closer.test.presentation.articles.paging
+package com.closer.test.presentation.main.articles.paging
 
 import android.util.Log
 import androidx.paging.PagingSource

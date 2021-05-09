@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.closer.test.presentation.articles.paging.ArticlePagingSource
+import com.closer.test.presentation.main.articles.paging.ArticlePagingSource
 import com.closer.test.util.model.Article
 import com.closer.test.util.network.ArticleService
 import kotlinx.coroutines.flow.Flow

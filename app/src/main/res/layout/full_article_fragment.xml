@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amar.library.ui.StickyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:stickyHeader="@+id/cl_title">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            tools:src="@drawable/ic_error_no_result"
+            android:importantForAccessibility="no"
+            android:padding="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/darker_gray" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_title"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Article title" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Someone with nice name" />
+
+            <TextView
+                android:id="@+id/tv_published_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                app:layout_constraintTop_toBottomOf="@id/tv_author"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1 de outubro de 2020" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis laoreet diam. Sed ac dignissim dolor, eu feugiat ipsum. Nullam vehicula dui vitae nulla pharetra convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis quam ac lacus commodo aliquam. Ut turpis nulla, ornare nec mi sed, pellentesque interdum risus. Pellentesque hendrerit ultricies dignissim. Sed nec lacinia felis, eu blandit enim. Aenean mattis varius ante at placerat. Donec cursus volutpat felis. Mauris congue dolor in bibendum egestas. Sed faucibus nec odio vitae iaculis.
+
+Nulla ornare sollicitudin odio. Mauris eu ipsum ut purus elementum imperdiet sit amet mattis dui. Suspendisse quam urna, tristique sed leo sit amet, vestibulum tristique justo. In vehicula laoreet erat ut aliquet. Etiam sollicitudin lacus est, vitae dictum diam ullamcorper varius. Vestibulum volutpat odio eu elit imperdiet elementum. Nulla eget velit in eros elementum mollis non nec purus. Vestibulum ut neque eget metus mattis semper. Integer sollicitudin rhoncus tellus, sed semper velit mattis tincidunt. Integer porttitor tempus diam, sit amet placerat tellus feugiat ut. Phasellus lectus purus, elementum a blandit eget, ultricies vitae nisi. Vivamus mollis lorem turpis, in pharetra purus congue sed. Morbi fermentum blandit turpis. Phasellus tincidunt finibus neque, sodales aliquam felis cursus pulvinar.
+
+Nam est nunc, placerat ut arcu at, finibus lacinia leo. Integer posuere risus neque, ut aliquam turpis scelerisque vitae. Donec eleifend, arcu et lobortis pellentesque, nunc libero pretium ex, eget dictum lorem magna in magna. Proin blandit nunc sit amet nisl maximus blandit. Curabitur ut facilisis ex, quis feugiat nibh. Suspendisse sit amet ligula gravida, blandit diam vel, pellentesque lorem. Vivamus maximus posuere urna at ultricies. Nulla nunc sapien, tincidunt ac est eu, convallis lacinia felis. Etiam eget ante condimentum, accumsan felis eget, interdum mauris. Pellentesque eu mauris finibus, gravida nibh eget, lobortis lectus. Vestibulum lobortis justo a ipsum sodales pellentesque.
+
+Mauris vitae nisi sollicitudin, bibendum lorem in, faucibus nibh. Curabitur eros quam, dictum ut finibus ut, rhoncus at est. Aliquam convallis, nisl ac semper posuere, dui purus posuere ligula, non mollis nisi neque at odio. Fusce et neque in nulla posuere tristique. Cras finibus ex nibh, et fermentum sem blandit ut. Pellentesque rutrum est et felis fringilla, at pretium erat gravida. Pellentesque maximus mauris vitae gravida cursus. Aenean vitae sapien quis libero interdum malesuada. Fusce at dictum eros, eget pulvinar elit. Fusce sed tempus est. Maecenas tempus dolor eu odio viverra posuere. Integer sit amet porta tortor. Vestibulum faucibus tortor enim, in mattis lacus congue at. Cras sapien est, facilisis quis odio ut, viverra malesuada purus. Donec pretium nisl quis est porttitor, ac viverra felis euismod. Mauris suscipit sollicitudin nisi sed pretium.
+
+Nunc nec quam orci. Vestibulum tincidunt, metus eu faucibus consequat, ipsum ipsum elementum velit, eu vestibulum lorem mauris vitae massa. Maecenas blandit sed mauris eu ultricies. Vestibulum non mauris tellus. Suspendisse nisi metus, imperdiet sodales euismod sit amet, sagittis vitae felis. Praesent quis hendrerit ex. Vestibulum in interdum augue.
+
+Etiam lorem erat, auctor quis varius eget, vulputate eu ipsum. Vivamus aliquam gravida interdum. Sed ut fringilla ante. Nulla orci mi, ultrices gravida porta feugiat, mollis eget odio. Vestibulum id nisl nec magna dapibus convallis et a est. Suspendisse iaculis placerat libero, ut volutpat tortor rhoncus at. Nam ultricies feugiat sem, at euismod ligula semper id. Morbi at libero turpis. Proin eu sollicitudin tortor, vel aliquet mauris. Nullam pretium, justo eu finibus luctus, ipsum massa mollis felis, non pellentesque nisl ipsum ac odio. Sed augue nisi, imperdiet et orci eget, semper congue augue. Nullam leo nibh, sollicitudin sed erat sit amet, volutpat egestas nisi. Nulla euismod nulla eget massa pellentesque, id volutpat nunc vehicula. Maecenas placerat, lectus in molestie mattis, quam est euismod sapien, non pharetra massa turpis in libero.
+
+Donec tincidunt malesuada dui non lobortis. Fusce ante tortor, aliquam efficitur blandit a, mollis eu nulla. Fusce consectetur mauris et faucibus volutpat. Cras scelerisque enim et nisi porta, eu sollicitudin nisl pharetra. Mauris nibh risus, mollis nec mi eget, fringilla varius quam. Curabitur lobortis turpis mi, nec dictum leo mattis sed. Phasellus vel placerat nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque a diam ullamcorper, tincidunt massa eu, semper purus. Nam eget ante eget tellus tincidunt posuere. Cras tincidunt ultrices lacus sit amet euismod.
+
+Sed dolor ligula, auctor vitae placerat nec, venenatis ac augue. Quisque varius magna a ipsum rhoncus, et facilisis ligula rutrum. In tristique tristique lorem. Praesent rhoncus arcu at nunc convallis, vitae tempor urna dictum. Donec sit amet venenatis sapien, in commodo urna. Suspendisse a malesuada risus, et laoreet ipsum. Fusce consectetur ligula eu odio tempor imperdiet. Fusce mattis euismod dapibus. Proin magna sapien, dictum non lectus sed, sodales consequat enim. Sed rutrum mauris non pulvinar vulputate. Cras ultricies ante leo, vel suscipit metus elementum nec.
+
+Suspendisse lorem massa, porta quis vehicula vel, tristique id nibh. Proin egestas diam eu ex tristique consectetur. Aliquam lacus quam, ornare ut egestas rutrum, tempus vel ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin nunc ipsum, facilisis condimentum ornare ac, tempus ut lectus. Donec imperdiet tincidunt elit. Pellentesque congue condimentum mauris, ac viverra eros. Pellentesque pharetra, purus vel egestas rhoncus, purus turpis mollis leo, non luctus ante diam quis dolor. In hendrerit libero vel arcu commodo, id elementum leo porta. Ut consequat purus et urna ullamcorper varius. Nunc vitae mi fringilla, volutpat sapien vitae, tempus tellus. Etiam euismod efficitur ante ac volutpat. Nam nec dolor interdum, porttitor mi vitae, laoreet lectus.
+
+Nullam euismod nulla id volutpat efficitur. Nullam ex mi, interdum sed consequat sit amet, cursus sed magna. Duis sagittis fermentum dolor, eu sollicitudin odio mattis et. Sed non tempus nunc. Aliquam rhoncus scelerisque mauris, id aliquet ante interdum a. Praesent bibendum risus ac erat blandit condimentum. Nunc luctus dui nec ex imperdiet, ut ultricies lorem tincidunt. Vestibulum euismod lacus magna, a fringilla leo sodales vitae. Nulla facilisi. Suspendisse ut elementum mi, id egestas ante. Integer fringilla rhoncus eros nec viverra. Nulla iaculis ut mauris vitae mattis." />
+
+
+    </LinearLayout>
+</com.amar.library.ui.StickyScrollView>

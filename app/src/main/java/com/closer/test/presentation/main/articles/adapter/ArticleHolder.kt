@@ -1,4 +1,4 @@
-package com.closer.test.presentation.articles.adapter
+package com.closer.test.presentation.main.articles.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.closer.test.databinding.ArticleRowBinding

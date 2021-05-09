@@ -1,4 +1,4 @@
-package com.closer.test.presentation.articles
+package com.closer.test.presentation.main.articles
 
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.closer.test.databinding.ArticlesFragmentBinding
-import com.closer.test.presentation.articles.adapter.ArticleAdapter
+import com.closer.test.presentation.main.articles.adapter.ArticleAdapter
 import com.closer.test.presentation.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest

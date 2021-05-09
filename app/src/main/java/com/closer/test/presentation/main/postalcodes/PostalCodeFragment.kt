@@ -1,4 +1,4 @@
-package com.closer.test.presentation.postalcodes
+package com.closer.test.presentation.main.postalcodes
 
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +10,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.closer.test.databinding.PostalCodeFragmentBinding
-import com.closer.test.presentation.postalcodes.adapter.PostalCodeAdapter
+import com.closer.test.presentation.main.postalcodes.adapter.PostalCodeAdapter
 import com.closer.test.util.Resource
 import com.closer.test.util.model.PostalCode
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,4 +1,4 @@
-package com.closer.test.presentation.postalcodes.adapter
+package com.closer.test.presentation.main.postalcodes.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.closer.test.databinding.PostalCodeRowBinding
