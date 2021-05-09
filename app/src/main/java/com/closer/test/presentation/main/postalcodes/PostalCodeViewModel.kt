@@ -23,6 +23,10 @@ class PostalCodeViewModel @Inject constructor(
     private val _postalCodes = MutableLiveData<Resource<List<PostalCode>>>()
     val postalCodes: LiveData<Resource<List<PostalCode>>> get() = _postalCodes
 
+    init {
+        fetchPostalCodes()
+    }
+
     fun filterPostalCodes(text: String) {
         Log.d(TAG, "filterPostalCodes $text")
 

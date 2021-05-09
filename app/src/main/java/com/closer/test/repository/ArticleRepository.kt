@@ -6,13 +6,13 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.closer.test.presentation.main.articles.paging.ArticlePagingSource
 import com.closer.test.util.model.Article
-import com.closer.test.util.network.ArticleService
+import com.closer.test.util.network.ArticleAPI
 import kotlinx.coroutines.flow.Flow
 
 private const val TAG = "ArticleRepository"
 private const val DEFAULT_PAGE_SIZE = 10
 class ArticleRepository(
-    private val articleAPI: ArticleService
+    private val articleAPI: ArticleAPI
 ) {
 
     fun fetchArticlesFlow(): Flow<PagingData<Article>> {

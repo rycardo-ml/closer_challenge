@@ -2,4 +2,5 @@
 <resources>
     <item name="layout_loading" type="id" />
     <item name="layout_error" type="id" />
+    <item name="layout_fetching" type="id" />
 </resources>

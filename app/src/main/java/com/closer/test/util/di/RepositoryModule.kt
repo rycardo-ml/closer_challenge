@@ -3,8 +3,8 @@ package com.closer.test.util.di
 import com.closer.test.repository.ArticleRepository
 import com.closer.test.repository.PostalCodeRepository
 import com.closer.test.util.database.AppDatabase
-import com.closer.test.util.network.ArticleService
-import com.closer.test.util.network.PostalCodeService
+import com.closer.test.util.network.ArticleAPI
+import com.closer.test.util.network.PostalCodeAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,11 +17,11 @@ object RepositoryModule {
 
     @ActivityRetainedScoped
     @Provides
-    fun providePostalCode(postalCodeService: PostalCodeService, db: AppDatabase) =
-        PostalCodeRepository(postalCodeService, db)
+    fun providePostalCode(postalCodeAPI: PostalCodeAPI, db: AppDatabase) =
+        PostalCodeRepository(db)
 
     @ActivityRetainedScoped
     @Provides
-    fun provideArticle(articleAPI: ArticleService) =
+    fun provideArticle(articleAPI: ArticleAPI) =
         ArticleRepository(articleAPI)
 }

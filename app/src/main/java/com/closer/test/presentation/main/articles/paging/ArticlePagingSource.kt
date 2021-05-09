@@ -3,13 +3,13 @@ package com.closer.test.presentation.main.articles.paging
 import android.util.Log
 import androidx.paging.PagingSource
 import com.closer.test.util.model.Article
-import com.closer.test.util.network.ArticleService
+import com.closer.test.util.network.ArticleAPI
 import retrofit2.HttpException
 import java.io.IOException
 
 private const val TAG = "ArticlePagingSource"
 private const val DEFAULT_PAGE_INDEX = 1
-class ArticlePagingSource(private val apiService: ArticleService): PagingSource<Int, Article>() {
+class ArticlePagingSource(private val articleAPI: ArticleAPI): PagingSource<Int, Article>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Article> {
         Log.d(TAG, "load")
@@ -20,7 +20,7 @@ class ArticlePagingSource(private val apiService: ArticleService): PagingSource<
         Log.d(TAG, "page[$page] size[${params.loadSize}]")
 
         return try {
-            val response = apiService.fetchArticles(page, params.loadSize)
+            val response = articleAPI.fetchArticles(page, params.loadSize)
 
             LoadResult.Page(
                 response,

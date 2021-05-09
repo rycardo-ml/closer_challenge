@@ -26,8 +26,8 @@ object RetrofitBuilder {
             .build()
     }
 
-    val apiPostalCode: PostalCodeService by lazy {
-        getRetrofitPostalCode().create(PostalCodeService::class.java)
+    val apiPostalCode: PostalCodeAPI by lazy {
+        getRetrofitPostalCode().create(PostalCodeAPI::class.java)
     }
 
     private fun getRetrofitArticle(): Retrofit {
@@ -44,8 +44,8 @@ object RetrofitBuilder {
             .build()
     }
 
-    val apiArticle: ArticleService by lazy {
-        getRetrofitArticle().create(ArticleService::class.java)
+    val apiArticle: ArticleAPI by lazy {
+        getRetrofitArticle().create(ArticleAPI::class.java)
     }
 
 
